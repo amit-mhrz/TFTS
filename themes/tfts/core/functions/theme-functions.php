@@ -11,10 +11,11 @@ if( !function_exists( 'tfts_add_meta' ) ) :
 	* Add meta tags.
 	*/
 	function tfts_add_meta() { ?>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Tech Force Technical Service</title>	
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" >
+    <meta name="format-detection" content="telephone=no">
+    <title>TechForce</title>
 	<?php }
 endif;
 
@@ -23,9 +24,10 @@ if ( !function_exists( 'tfts_add_links' ) ) :
 	* Add Google fonts, Pingback url, etc.
 	*/
 	function tfts_add_links() { ?> 
-	<!-- Google font -->
-	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,600,700" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700" rel="stylesheet">
+	<!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700" rel="stylesheet">
 	<?php }
 endif;
 

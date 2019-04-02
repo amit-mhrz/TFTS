@@ -47,6 +47,30 @@ if (!function_exists('tfts_homepage_banner')){
 	}
 }
 
+if (!function_exists('tfts_homepage_we_are')){
+	function tfts_homepage_we_are(){
+		get_template_part('template-parts/page/homepage/page', 'who-we-are');
+	}
+}
+
+if (!function_exists('tfts_homepage_services')){
+	function tfts_homepage_services(){
+		get_template_part('template-parts/page/homepage/page', 'services');
+	}
+}
+
+if (!function_exists('tfts_homepage_process')){
+	function tfts_homepage_process(){
+		get_template_part('template-parts/page/homepage/page', 'our-process');
+	}
+}
+
+if (!function_exists('tfts_homepage_clients')){
+	function tfts_homepage_clients(){
+		get_template_part('template-parts/page/homepage/page', 'clients');
+	}
+}
+
 
 /*==================================================================================================
   Hooks
@@ -79,3 +103,7 @@ add_action( 'tfts_footer', 'tfts_output_footer');
  * Homepage Hook
  */
 add_action( 'tfts_homepage_content', 'tfts_homepage_banner', 10 );
+add_action( 'tfts_homepage_content', 'tfts_homepage_we_are', 20 );
+add_action( 'tfts_homepage_content', 'tfts_homepage_services', 30 );
+add_action( 'tfts_homepage_content', 'tfts_homepage_process', 40 );
+add_action( 'tfts_homepage_content', 'tfts_homepage_clients', 50 );
