@@ -1,0 +1,11 @@
+.wpcf7-not-valid {
+    border: 1px red solid !important;
+}
+
+span.wpcf7-not-valid-tip {
+    display: none;
+}
+
+div#mapid {
+    height: 500px;
+}

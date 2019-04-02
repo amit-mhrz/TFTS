@@ -40,7 +40,6 @@ if (!function_exists('tfts_output_footer_content')){
 }
 
 // TFTS Homepage Content Hooks
-
 if (!function_exists('tfts_homepage_banner')){
 	function tfts_homepage_banner(){
 		get_template_part('template-parts/page/homepage/page', 'banner');
@@ -65,12 +64,69 @@ if (!function_exists('tfts_homepage_process')){
 	}
 }
 
-if (!function_exists('tfts_homepage_clients')){
-	function tfts_homepage_clients(){
-		get_template_part('template-parts/page/homepage/page', 'clients');
+if (!function_exists('tfts_clients_section')){
+	function tfts_clients_section(){
+		get_template_part('template-parts/page/common/page', 'clients');
 	}
 }
 
+
+// TFTS About us Content Hooks
+if (!function_exists('tfts_about_story')){
+	function tfts_about_story(){
+		get_template_part('template-parts/page/about/page', 'story');
+	}
+}
+
+if (!function_exists('tfts_about_team')){
+	function tfts_about_team(){
+		get_template_part('template-parts/page/about/page', 'team');
+	}
+}
+
+if (!function_exists('tfts_clients_section')){
+	function tfts_clients_section(){
+		get_template_part('template-parts/page/common/page', 'clients');
+	}
+}
+
+
+// TFTS Services Content Hooks
+if (!function_exists('tfts_services_section')){
+	function tfts_services_section(){
+		get_template_part('template-parts/page/services/page', 'services');
+	}
+}
+
+
+// TFTS Projects Content Hooks
+if (!function_exists('tfts_projects_section')){
+	function tfts_projects_section(){
+		get_template_part('template-parts/page/projects/page', 'projects');
+	}
+}
+
+
+// TFTS Gallery Content Hooks
+if (!function_exists('tfts_gallery_section')){
+	function tfts_gallery_section(){
+		get_template_part('template-parts/page/gallery/page', 'gallery');
+	}
+}
+
+// TFTS Contact Content Hooks
+if (!function_exists('tfts_contact_section')){
+	function tfts_contact_section(){
+		get_template_part('template-parts/page/contact/page', 'contact');
+	}
+}
+
+// TFTS Careers Content Hooks
+if (!function_exists('tfts_careers_section')){
+	function tfts_careers_section(){
+		get_template_part('template-parts/page/careers/page', 'careers');
+	}
+}
 
 /*==================================================================================================
   Hooks
@@ -91,7 +147,7 @@ add_action( 'tfts_links', 'tfts_add_links' );
 * @see tfts_output_footer_content()
 */
  add_action( 'tfts_header_content', 'tfts_output_header_content', 10);
- add_action( 'tfts_footer_content', 'tfts_output_footer_content', 10);
+ add_action( 'tfts_footer_content', 'tfts_output_footer_content', 20);
 
 /**
  * Header / Footer  
@@ -106,4 +162,21 @@ add_action( 'tfts_homepage_content', 'tfts_homepage_banner', 10 );
 add_action( 'tfts_homepage_content', 'tfts_homepage_we_are', 20 );
 add_action( 'tfts_homepage_content', 'tfts_homepage_services', 30 );
 add_action( 'tfts_homepage_content', 'tfts_homepage_process', 40 );
-add_action( 'tfts_homepage_content', 'tfts_homepage_clients', 50 );
+add_action( 'tfts_homepage_content', 'tfts_clients_section', 50 );
+
+add_action( 'tfts_about_us_content', 'tfts_about_story', 10 );
+add_action( 'tfts_about_us_content', 'tfts_about_team', 20 );
+add_action( 'tfts_about_us_content', 'tfts_clients_section', 30 );
+
+add_action( 'tfts_services_content', 'tfts_services_section', 10 );
+add_action( 'tfts_services_content', 'tfts_clients_section', 20 );
+
+add_action( 'tfts_projects_content', 'tfts_projects_section', 10 );
+add_action( 'tfts_projects_content', 'tfts_clients_section', 20 );
+
+add_action( 'tfts_gallery_content', 'tfts_gallery_section', 10 );
+add_action( 'tfts_gallery_content', 'tfts_clients_section', 20 );
+
+add_action( 'tfts_contact_content', 'tfts_contact_section', 10 );
+
+add_action( 'tfts_careers_content', 'tfts_careers_section', 10 );

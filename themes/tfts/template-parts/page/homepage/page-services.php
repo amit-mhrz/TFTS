@@ -12,7 +12,7 @@
             <div class="col-md-4">
                 <div class="service-item wow fadeInRight" data-wow-delay=".5s">
                     <a href="services.html">
-                        <img src="assets/images/fitout-lg-img.png" alt="">
+                        <img src="<?php echo TFTS_ASSEST_URI . '/images/fitout-lg-img.png';?>" alt="">
                         <h3>Fit Outs & <br> Interior Renovation</h3>
                     </a>
                 </div>
@@ -20,13 +20,13 @@
             <div class="col-md-4">
                 <div class="service-item wow fadeInDown" data-wow-delay=".5s">
                     <a href="services.html">
-                        <img src="assets/images/hvac-lg.png" alt="">
+                        <img src="<?php echo TFTS_ASSEST_URI . '/images/hvac-lg.png';?>" alt="">
                         <h3>HVAC</h3>
                     </a>
                 </div>
                 <div class="service-item wow fadeInDown" data-wow-delay=".5s">
                     <a href="services.html">
-                        <img src="assets/images/maintenance-lg.png" alt="">
+                        <img src="<?php echo TFTS_ASSEST_URI . '/images/maintenance-lg.png';?>" alt="">
                         <h3>Maintenance Services</h3>
                     </a>
                 </div>
@@ -34,13 +34,13 @@
             <div class="col-md-4">
                 <div class="service-item wow fadeInLeft" data-wow-delay=".5s">
                     <a href="services.html">
-                        <img src="assets/images/cleaning-lg.png" alt="">
+                        <img src="<?php echo TFTS_ASSEST_URI . '/images/cleaning-lg.png';?>" alt="">
                         <h3>Cleaning Services</h3>
                     </a>
                 </div>
                 <div class="service-item wow fadeInLeft" data-wow-delay=".5s">
                     <a href="services.html">
-                        <img src="assets/images/automation-lg.png" alt="">
+                        <img src="<?php echo TFTS_ASSEST_URI . '/images/automation-lg.png';?>" alt="">
                         <h3>Automation Solutions</h3>
                     </a>
                 </div>

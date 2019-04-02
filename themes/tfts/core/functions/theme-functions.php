@@ -15,7 +15,7 @@ if( !function_exists( 'tfts_add_meta' ) ) :
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" >
     <meta name="format-detection" content="telephone=no">
-    <title>TechForce</title>
+    <title><?php echo get_bloginfo('name'); ?></title>
 	<?php }
 endif;
 
