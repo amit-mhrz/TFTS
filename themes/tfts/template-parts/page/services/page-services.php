@@ -1,11 +1,11 @@
 <div class="page-title wow fadeInDown" data-wow-delay=".5s">
   <div class="container">
       <div class="col-md-12">
-            <h2>Services</h2>
+            <h2><?php the_title();?></h2>
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Services</li>
+                    <li class="breadcrumb-item"><a href="<?php echo site_url();?>">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page"><?php the_title();?></li>
                 </ol>
             </nav>
       </div>
@@ -27,8 +27,9 @@
             $query = new WP_Query($args);
             if( $query->have_posts()):
             while( $query->have_posts()): $query->the_post(); ?>
-                <div class="row <?php echo ($i%2==0)?'':'row-rev';?>">   
-                    <div class="col-md-6 fitout-section wow fadeInRight" data-wow-delay=".5s">
+                <div class="row <?php echo ($i%2==0)?'':'row-rev';?>">
+                    <?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'thumbnail' );?>
+                    <div class="col-md-6 wow fadeInRight services_imgs" data-wow-delay=".5s" style="background: url('<?php echo $url;?>') no-repeat; background-size: cover; background-position: center center;">
                     </div>
                     <div class="col-md-6 wow fadeInLeft" data-wow-delay=".5s">
                         <div class="service-details">

@@ -25,7 +25,7 @@ if ( !function_exists( 'tfts_add_links' ) ) :
 	*/
 	function tfts_add_links() { ?> 
 	<!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico"> -->
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700" rel="stylesheet">
 	<?php }

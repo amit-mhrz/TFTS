@@ -1182,31 +1182,6 @@ a.effect-underline:hover:after {
     float: left;
     padding-right: 40px;
 }
-.fitout-section {
-    background: url('../images/fitout-lg-img.png') no-repeat;
-    background-size: cover;
-    background-position: center center;
-}
-.hvac-section {
-    background: url('../images/hvac-lg.png') no-repeat;
-    background-size: cover;
-    background-position: center center;   
-}
-.maintenance-section {
-    background: url('../images/maintenance-lg.png') no-repeat;
-    background-size: cover;
-    background-position: center center;   
-}
-.cleaning-section {
-    background: url('../images/cleaning-lg.png') no-repeat;
-    background-size: cover;
-    background-position: center center;   
-}
-.automation-section {
-    background: url('../images/automation-lg.png') no-repeat;
-    background-size: cover;
-    background-position: center center;   
-}
 .project-item {
     background: #fff;
     border: 1px solid #f1f1f1;

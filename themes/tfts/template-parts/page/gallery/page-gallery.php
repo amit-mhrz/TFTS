@@ -1,11 +1,11 @@
 <div class="page-title wow fadeInDown" data-wow-delay=".5s">
   <div class="container">
       <div class="col-md-12">
-            <h2>Gallery</h2>
+            <h2><?php the_title();?></h2>
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Gallery</li>
+                    <li class="breadcrumb-item"><a href="<?php echo site_url();?>">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page"><?php the_title();?></li>
                 </ol>
             </nav>
       </div>

@@ -7,7 +7,6 @@ function tfts_upload_mime_types($mimes) {
 }
 add_filter('upload_mimes', 'tfts_upload_mime_types');
 
-
 // Resize image using img thumb
 if ( !( function_exists('tfts_imgsize') ) ) :
   // Use of phpthumb -- Resize your image appearing on a site

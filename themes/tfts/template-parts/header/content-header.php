@@ -20,7 +20,7 @@
                                           <?php } if($linkedin != ''){ ?>
                                             <li><a href="<?php echo $linkedin;?>" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
                                           <?php } ?>
-                                            <li><span>We Provide Services You Need</span></li>
+                                            <li><span><?php the_field('header_text', 'option');?></span></li>
                                       </ul>
                                   </div>
                                  <div class="col-md-6 text-right right-info">
