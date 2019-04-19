@@ -501,6 +501,7 @@ img.img-responsive {
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
+    z-index: 2;
 }
 .service-item a:hover img {
     opacity: 0.4;
@@ -539,13 +540,6 @@ img.img-responsive {
 }
 .sec-title.white-col h2 {
     color: #fff;
-}
-#fitout-process {
-    background: url('../images/fitout-bg.png') no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 #fitout-process .sec-title {
     margin-bottom: 140px;
@@ -1023,7 +1017,6 @@ a.effect-underline:hover:after {
 }
 .page-title {
     padding: 100px 0 40px;
-    background: url(../images/fitout-bg.png) no-repeat;
     background-position: center center;
     text-align: center;
     height: 240px;
@@ -1233,7 +1226,7 @@ a.effect-underline:hover:after {
     bottom: auto;
     bottom: 0;
     height: 100%;
-    background: rgba(254,191,16, 0.8);  
+    background: rgba(254,191,16, 1);  
 }
 .project-item:hover .overlay .overlay-inner {
     position: absolute;
@@ -1303,10 +1296,10 @@ a.effect-underline:hover:after {
     line-height: 1.8;
     margin-bottom: 50px;
 }
-.contact-form form .form-group {
+.contact-form form .form-group, .quote-form form .form-group {
     margin-bottom: 30px;
 }
-.contact-form form .form-group .form-control {
+.contact-form form .form-group .form-control, .quote-form form .form-group .form-control {
     width: 100%;
     height: 60px;
     padding: 10px 30px;
@@ -1433,4 +1426,30 @@ textarea.form-control {
 #careers .submit-btn {
     margin-top: 20px;
     text-align: right;
+}
+.fixed .in_header_menu {
+    margin-left: 30px;
+}
+.fixed .menu-header-menu-container {
+    display: inline-block;
+}
+.modal-body {
+    padding: 50px;
+}
+.form-modal-pop h3 {
+    font-size: 20px;
+    font-weight: bold;
+}
+.form-modal-pop .close {
+    width: 50px;
+    height: 50px;
+    background: #ff0000;
+    display: block;
+    right: 0;
+    position: absolute;
+    top: 0;
+}
+.form-modal-pop .close span {
+    color: #fff;
+    font-size: 40px;
 }

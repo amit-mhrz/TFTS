@@ -14,9 +14,7 @@
                 $args = array(
                     'posts_per_page'    => 5, 
                     'post_type'         => 'tfts_services', 
-                    'post_status'       => 'publish', 
-                    'orderby'           => 'date', 
-                    'order'             => 'ASC'
+                    'post_status'       => 'publish'
                 );
                 $query = new WP_Query($args);
                 if( $query->have_posts()):
@@ -24,11 +22,11 @@
 
             if(($i==1)||($i==2)||($i==4)){
                 echo '<div class="col-md-4">';
-            }?>            
+            }?>
                 <div class="service-item wow <?php echo (($i==2)||($i==3))?'fadeInDown':'fadeInLeft';?>" data-wow-delay=".5s">
-                    <a href="<?php the_permalink();?>">
+                    <a href="<?php echo site_url('/services').'/#service-'.$i;?>">
                         <?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'thumbnail' );?>
-                        <img src="<?php echo $url;?>" alt="">
+                        <img src="<?php echo $url;?>" alt="" class="new-overlay">
                         <h3><?php the_title();?></h3>
                     </a>
                 </div>

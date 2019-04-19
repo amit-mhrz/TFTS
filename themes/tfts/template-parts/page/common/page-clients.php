@@ -17,9 +17,7 @@
                         $args = array(
                             'posts_per_page'    => -1, 
                             'post_type'         => 'tfts_testimonials', 
-                            'post_status'       => 'publish', 
-                            'orderby'           => 'date', 
-                            'order'             => 'ASC'
+                            'post_status'       => 'publish'
                         );
                         $query = new WP_Query($args);
                         if( $query->have_posts()):
@@ -36,8 +34,10 @@
                         <h3><?php the_title();?></h3>
                         <span class="designation"><?php the_field('designation');?></span>
                         <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-
-                        <p class="client-words"><i class="fas fa-quote-left"></i><?php the_content();?><i class="fas fa-quote-right"></i></p>
+                        <?php $content = get_the_content();?>
+                        <p class="client-words"><i class="fas fa-quote-left"></i>
+                            <?php echo strip_tags($content, '<b>');?>
+                        <i class="fas fa-quote-right"></i></p>
                     </div>
                     <?php } endwhile; endif; wp_reset_query(); ?>
                 </div>

@@ -25,7 +25,8 @@
 	do_action('tfts_links');
 
     // Keep it for plugins.
-	wp_head(); ?> </head>
+	wp_head();?>
+</head>
 
 
 <body>

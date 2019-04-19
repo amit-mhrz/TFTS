@@ -28,7 +28,7 @@
                         <?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'thumbnail' );?>
                         <img src="<?php echo $url;?>" alt="" class="img-responsive">
                         <h3><?php the_title();?></h3>
-                        <span class="team-designation">Managing Director</span>
+                        <span class="team-designation"><?php the_field('staff_designation');?></span>
                         <ul class="social-links no-style">
                             <?php 
                               $facebook = get_field('staff_facebook');

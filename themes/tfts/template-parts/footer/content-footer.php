@@ -1,3 +1,62 @@
+<script type="text/javascript">	
+	jQuery(document).ready(function($) {
+	// script for select phone number auto
+	$('.mc4wp-form-fields').addClass('email-subscription-form');
+	$("#mobileNumber").intlTelInput({
+		initialCountry: "auto",
+		geoIpLookup: function(callback) {
+			$.get('https://ipinfo.io', function() {}, "jsonp").always(function(resp) {
+				var countryCode = (resp && resp.country) ? resp.country : "";
+				var cCode = countryCode.toLowerCase();
+	            var telCode = $('ul.country-list').find("li[data-country-code='" + cCode + "']").data('dial-code');
+	            $('.wpcf7-form input[name="country-code"]').val( '+' + telCode );
+				callback(countryCode);
+			});
+		},
+		utilsScript: "<?php echo TFTS_ASSEST_URI . ('/intl-tel/js/utils.js');?>"
+	});
+	
+	$("#QmobileNumber").intlTelInput({
+		initialCountry: "auto",
+		geoIpLookup: function(callback) {
+			$.get('https://ipinfo.io', function() {}, "jsonp").always(function(resp) {
+				var countryCode = (resp && resp.country) ? resp.country : "";
+				var cCode = countryCode.toLowerCase();
+	            var telCode = $('ul.country-list').find("li[data-country-code='" + cCode + "']").data('dial-code');
+	            $('.wpcf7-form input[name="country-code"]').val( '+' + telCode );
+				callback(countryCode);
+			});
+		},
+		utilsScript: "<?php echo TFTS_ASSEST_URI . ('/intl-tel/js/utils.js');?>"
+	});
+	
+	$('.wpcf7-form input[name="country-code"]').hide();
+	$('.intl-tel-input ul.country-list li').click(function(){
+	    $('.wpcf7-form input[name="country-code"]').val( $(this).find('span.dial-code').text() );
+	})
+	});
+</script>
+
+<!-- Book Now Modal <-->
+
+<div class="modal fade" id="get_a_quote" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+	<div class="modal-dialog modal-lg modal-dialog-centered modal__custom" role="document">
+		<div class="modal-content">
+			<div class="modal-body">
+			    <div class="form-modal-pop">
+			    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <h3 style="padding-left:16px;">Get A Quote</h3>
+                </div><br>
+                <div class="quote-form">
+				<?php echo do_shortcode( '[contact-form-7 id="243" title="Get a Quote"]' ) ?>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
     <footer id="footer" class="bg-black">
         <div class="container">
             <div class="row">
@@ -31,12 +90,15 @@
                             <h3><?php the_field('footer_column_4_title', 'option');?></h3>
                             <p><?php the_field('follow_us_description', 'option');?></p>
 
-                            <form action="#" class="email-subscription-form">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Enter email address">
-                                    <button><i class="fas fa-arrow-right"></i></button>
-                                </div>
-                            </form>
+                            <!--<form class="email-subscription-form">-->
+                            <!--    <div class="form-group">-->
+                            <!--        <input type="text" class="form-control" placeholder="Enter email address">-->
+                            <!--        <button><i class="fas fa-arrow-right"></i></button>-->
+                            <!--    </div>-->
+                            <!--</form>-->
+                            
+                            <?php echo do_shortcode('[mc4wp_form id="221"]');?>
+                            
                             <div class="social-block">
                                 <ul class="no-style social-links">
                                     <?php 

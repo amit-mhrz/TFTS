@@ -1,5 +1,5 @@
 <div class="parallax-window">
-<section id="fitout-process" class="section-container">
+<section id="fitout-process" class="section-container" style="background: url('<?php the_field('fit_out_process_b_image');?>') no-repeat; background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover;">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -7,7 +7,7 @@
                     <h2><?php the_field('fit_out_process_title');?></h2>
                     <p class="short-text"><?php the_field('fit_out_process_sub_title');?></p>
                 </div>
-                <img src="<?php echo TFTS_ASSEST_URI. '/images/fitout-process.png';?>" alt="" class="img-responsive wow fadeInUp" data-wow-delay=".5s">
+                <img src="<?php the_field('fit_out_process_image');?>" alt="" class="img-responsive wow fadeInUp" data-wow-delay=".5s">
             </div>
         </div>
     </div>
@@ -37,7 +37,7 @@
                     if($i%2 == 0){ echo '<div class="col-md-6">';}?>
 
                         <div class="why-item">
-                            <span class="why-icon"><i class="fas fa-crop"></i></span>
+                            <span class="why-icon"><i class="fas fa-<?php if($i==0){ echo 'crop'; } if($i==1){ echo 'rocket'; } if($i==2){ echo 'lightbulb'; } if($i==3){ echo 'users'; }?>"></i></span>
                             <div class="why-content">
                                 <h3><?php the_sub_field('wcu_key_title');?></h3>
                                 <p><?php the_sub_field('wcu_key_description');?></p>
@@ -45,7 +45,6 @@
                         </div>
 
                     <?php $i++; if($i%2 == 0){ echo '</div>';}?>
-
                     <?php endwhile; endif;?>
                 </div>
             </div>

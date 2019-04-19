@@ -29,10 +29,12 @@ $(function() {
     $('.feat-slider').slick({
       dots: true,
       arrows: false,
+      autoplay: true
     });
      $('.client-slider').slick({
       arrows: true,
       dots: true,
+      autoplay: true
     });
     $('.clients-slider').slick({
         dots: true,
@@ -109,10 +111,12 @@ $(function() {
       {
         $('.header-container').addClass('fixed-head');
         $('#header').addClass('fixed');
+        $('.in_header_menu').show();
       }
       else{
         $('.header-container').removeClass('fixed-head');
         $('#header').removeClass('fixed');
+        $('.in_header_menu').hide();
       } 
   });
 

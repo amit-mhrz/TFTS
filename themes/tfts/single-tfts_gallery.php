@@ -1,6 +1,6 @@
 <?php do_action('tfts_header');?>
 
-<div class="page-title wow fadeInDown" data-wow-delay=".5s">
+<div class="page-title wow fadeInDown" data-wow-delay=".5s" style="background: url('<?php the_field('inner_page_banner_image', 'option');?>') no-repeat; padding: 100px 0 40px; background-position: center center; text-align: center; height: 240px; -webkit-transition: all 0.3s ease; -o-transition: all 0.3s ease; transition: all 0.3s ease;">
   <div class="container">
       <div class="col-md-12">
             <h2>Gallery</h2>
@@ -25,7 +25,7 @@
                   <?php foreach( $images as $image ): ?>
                           <div class="col-md-4 col-sm-6">
                             <a data-fancybox="gallery" href="<?php echo $image['url']; ?>" data-caption="Maintenance">
-                              <img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>">
+                              <img src="<?php echo $image['sizes']['medium']; ?>" alt="<?php echo $image['alt']; ?>">
                             </a>
                           </div>
                   <?php endforeach; ?>

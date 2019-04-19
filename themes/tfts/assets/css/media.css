@@ -37,6 +37,9 @@
     }
 }
 @media screen and (max-width: 1200px) {
+    #header .container {
+        max-width: 96%;
+    }
     .support-right {
         padding-left: 160px;
     }
@@ -49,6 +52,11 @@
     }
 
 }
+@media screen and (max-width: 1070px) {
+    #main-nav {
+        margin-left: 120px;
+    }
+}
 @media screen and (max-width: 1024px) {
 	
 	.top-header-inner {
@@ -59,6 +67,13 @@
 	}
 }
 @media screen and (max-width: 991px) {
+    .fixed .menu-header-menu-container {
+        display: block;
+    }
+    .fixed .in_header_menu {
+        margin: 0;
+        display: block!important;
+    }
     .container {
         max-width: 96%; 
     }
@@ -542,7 +557,7 @@
     #services .row {
         margin-bottom: 30px;
     }
-    .fitout-section, .automation-section, .hvac-section, .maintenance-section, .cleaning-section {
+    .fitout-section, .automation-section, .hvac-section, .maintenance-section, .cleaning-section, .services_imgs {
         height: 200px;
     }
     .service-details h3 {

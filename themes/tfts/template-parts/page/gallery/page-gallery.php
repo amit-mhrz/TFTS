@@ -1,4 +1,4 @@
-<div class="page-title wow fadeInDown" data-wow-delay=".5s">
+<div class="page-title wow fadeInDown" data-wow-delay=".5s" style="background: url('<?php the_field('inner_page_banner_image', 'option');?>') no-repeat; padding: 100px 0 40px; background-position: center center; text-align: center; height: 240px; -webkit-transition: all 0.3s ease; -o-transition: all 0.3s ease; transition: all 0.3s ease;">
   <div class="container">
       <div class="col-md-12">
             <h2><?php the_title();?></h2>
@@ -21,9 +21,7 @@
             $args = array(
                 'posts_per_page'    => -1, 
                 'post_type'         => 'tfts_gallery', 
-                'post_status'       => 'publish', 
-                'orderby'           => 'date', 
-                'order'             => 'ASC'
+                'post_status'       => 'publish'
             );
             $query = new WP_Query($args);
             if( $query->have_posts()):

@@ -1,11 +1,55 @@
+div#mapid {
+    height: 500px;
+}
+
+.hidden {
+    display: none;
+}
+
+.intl-tel-input.allow-dropdown {
+    width: 100%;
+}
+
+.mc4wp-alert.mc4wp-error p {
+    color: #fd0000!important;
+}
+
+.mc4wp-alert.mc4wp-success p {
+    color: #00bb00!important;
+}
+
 .wpcf7-not-valid {
     border: 1px red solid !important;
 }
 
-span.wpcf7-not-valid-tip {
+input.wpcf7-form-control.wpcf7-text.form-control {
+    text-transform: none;
+}
+
+textarea.wpcf7-form-control.wpcf7-textarea.wpcf7-validates-as-required.form-control {
+    text-transform: none;
+}
+
+section.section.error-404.not-found {
+    text-align: center;
+    padding: 100px;
+}
+
+.in_header_menu {
     display: none;
 }
 
-div#mapid {
-    height: 500px;
+.quote-form input.wpcf7-form-control.wpcf7-submit.btn.btn-secondary {
+    margin-left: 15px;
+}
+
+.service-item a:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 150px;
+    background: linear-gradient(to bottom, transparent 0%, rgba(3, 1, 2, 0.98) 100%);
+    transition: all .3s;
 }

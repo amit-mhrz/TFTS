@@ -7,7 +7,7 @@
                       <div class="top-header">
                           <div class="top-header-inner">
                              <div class="row">
-                                  <div class="col-md-6">
+                                  <div class="col-md-5">
                                       <ul class="social-links no-style">
                                         <?php 
                                           $facebook = get_field('facebook', 'option');
@@ -23,9 +23,13 @@
                                             <li><span><?php the_field('header_text', 'option');?></span></li>
                                       </ul>
                                   </div>
-                                 <div class="col-md-6 text-right right-info">
+                                 <div class="col-md-7 text-right right-info">
                                       <a href="maito:<?php the_field('header_email_address', 'option');?>"><i class="far fa-envelope"></i> <?php the_field('header_email_address', 'option');?></a>
                                       <a href="tel:<?php the_field('header_contact_number', 'option');?>"><i class="fas fa-phone fa-flip-horizontal"></i> +<?php the_field('header_contact_number', 'option');?></a>
+                                      <!-- Button trigger modal -->
+                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#get_a_quote">
+                                          Get a Quote
+                                        </button>
                                  </div>
                              </div>
                           </div>
@@ -55,6 +59,9 @@
                                          'walker'          => new bs4navwalker()
                                         ]);
                                     ?>
+                                        <button type="button" class="btn btn-primary in_header_menu" data-toggle="modal" data-target="#get_a_quote">
+                                          Get a Quote
+                                        </button>
                                     </div>
                               </nav>
                           </div>

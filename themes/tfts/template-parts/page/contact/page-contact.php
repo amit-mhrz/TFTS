@@ -1,4 +1,4 @@
-<div class="page-title wow fadeInDown" data-wow-delay=".5s">
+<div class="page-title wow fadeInDown" data-wow-delay=".5s" style="background: url('<?php the_field('inner_page_banner_image', 'option');?>') no-repeat; padding: 100px 0 40px; background-position: center center; text-align: center; height: 240px; -webkit-transition: all 0.3s ease; -o-transition: all 0.3s ease; transition: all 0.3s ease;">
   <div class="container">
       <div class="col-md-12">
             <h2><?php the_title();?></h2>
@@ -41,7 +41,7 @@
                     <li><i class="fas fa-map-marker"></i><?php the_field('contact_location');?></li>
                     <li><i class="fas fa-phone fa-flip-horizontal"></i> <a href="tel:<?php the_field('contact_phone');?>">+<?php the_field('contact_phone');?></a></li>
                     <li><i class="fas fa-mobile"></i> <a href="tel:<?php the_field('contact_m_no');?>">+<?php the_field('contact_m_no');?></a></li>
-                    <li><i class="fas fa-fax"></i> <a href="<?php the_field('contact_fax');?>">+<?php the_field('contact_fax');?></a></li>
+                    <li><i class="fas fa-fax"></i> <a href="fax:<?php the_field('contact_fax');?>">+<?php the_field('contact_fax');?></a></li>
                     <li><i class="fas fa-envelope"></i> <a href="mailto:<?php the_field('header_email_address', 'option');?>"><?php the_field('header_email_address', 'option');?></a></li>
                 </ul>                                
             </div>

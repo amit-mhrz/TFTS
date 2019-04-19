@@ -4,9 +4,6 @@
  *
  * @package TFTS
  */
-?>
-
-	<?php
 
 	/**
 	 * tfts_footer_content hook
